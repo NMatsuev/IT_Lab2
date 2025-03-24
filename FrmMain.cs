@@ -5,7 +5,7 @@ namespace IT_Lab2
 {
     public partial class FrmMain : Form
     {
-        private const int BUFFER_MAX_SIZE = 100000;
+        private const int BUFFER_MAX_SIZE = 400000;
         private const int BYTES_AMOUNT = 30;
         private const int BYTE_SIZE = 8;
         private const int REGISTER_SIZE = 25;
@@ -72,11 +72,12 @@ namespace IT_Lab2
                 MessageBox.Show("В поле для ввода начального состояния регистра должно быть не менее 25 двоичных цифр.");
                 return;
             }
+            Cursor = Cursors.WaitCursor;
             _input = Converter.BoolArrayFromString(Input);
             _register = Converter.BoolQueueFromString(StartKey, REGISTER_SIZE);
             _key = KeyMaker.Create(_register, Input.Length);
             Update(Converter.StringFromBoolArray(_key), Converter.StringFromBoolArray(ArraysOperations.Xor(_input, _key)));
-
+            Cursor = Cursors.Default;
         }
         private void Update(string key, string output)
         {
@@ -89,6 +90,7 @@ namespace IT_Lab2
             OpenFileDialog ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
             {
+                Cursor = Cursors.WaitCursor;
                 Update("", "");
                 try
                 {
@@ -115,7 +117,12 @@ namespace IT_Lab2
                 {
                     Console.WriteLine("Ошибка: " + ex.Message);
                 }
+                finally
+                {
+                    Cursor = Cursors.Default;
+                }
             }
+
         }
 
         private void BtnSaveFile_Click(object sender, EventArgs e)

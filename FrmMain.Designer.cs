@@ -196,16 +196,16 @@
             // 
             RichTxtBoxInitText.Location = new Point(391, 60);
             RichTxtBoxInitText.Name = "RichTxtBoxInitText";
-            RichTxtBoxInitText.Size = new Size(368, 291);
+            RichTxtBoxInitText.Size = new Size(497, 291);
             RichTxtBoxInitText.TabIndex = 1;
             RichTxtBoxInitText.Text = "";
             // 
             // RichTxtBoxKey
             // 
-            RichTxtBoxKey.Location = new Point(789, 60);
+            RichTxtBoxKey.Location = new Point(928, 60);
             RichTxtBoxKey.Name = "RichTxtBoxKey";
             RichTxtBoxKey.ReadOnly = true;
-            RichTxtBoxKey.Size = new Size(373, 291);
+            RichTxtBoxKey.Size = new Size(481, 291);
             RichTxtBoxKey.TabIndex = 2;
             RichTxtBoxKey.Text = "";
             // 
@@ -214,7 +214,7 @@
             RichTxtBoxResultText.Location = new Point(391, 417);
             RichTxtBoxResultText.Name = "RichTxtBoxResultText";
             RichTxtBoxResultText.ReadOnly = true;
-            RichTxtBoxResultText.Size = new Size(771, 303);
+            RichTxtBoxResultText.Size = new Size(1018, 303);
             RichTxtBoxResultText.TabIndex = 3;
             RichTxtBoxResultText.Text = "";
             // 
@@ -232,7 +232,7 @@
             // 
             LabelKey.AutoSize = true;
             LabelKey.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            LabelKey.Location = new Point(789, 23);
+            LabelKey.Location = new Point(928, 23);
             LabelKey.Name = "LabelKey";
             LabelKey.Size = new Size(63, 25);
             LabelKey.TabIndex = 7;
@@ -261,7 +261,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1183, 744);
+            ClientSize = new Size(1433, 744);
             Controls.Add(RichTxtBoxResultText);
             Controls.Add(RichTxtBoxInitText);
             Controls.Add(LabelResultText);
